@@ -1,4 +1,4 @@
-* {
+html {
     font-family: "Sarabun", sans-serif;
 }
 
@@ -105,9 +105,9 @@ section.headerpic {
 }
 
 img.headerpic {
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
 }
 
 .profilepic {
@@ -147,29 +147,6 @@ blockquote {
     background-color: lightgrey;
     padding: 10px;
     font-style: italic;
-}
-
-a:link,
-:visited {
-    color: white;
-    background-color: purple;
-    text-decoration: none;
-    padding: 10px 20px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 50px;
-    margin: 10px;
-}
-
-a:hover {
-    background-color: white;
-    color: purple;
-}
-
-.autolink {
-    letter-spacing: 3px;
-    font-style: normal;
-    font-size: 40%;
 }
 
 .contact {
