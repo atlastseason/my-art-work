@@ -1,22 +1,154 @@
+* {
+    margin: 0 auto;
+}
+
 html {
     font-family: "Sarabun", sans-serif;
     font-size: 20px;
     background-color: whitesmoke;
 }
 
+body {
+}
+
+header img,
+video,
+h1,
+nav,
+article,
+section {
+    margin: 0.5rem;
+    /*border: 1px solid grey;*/
+}
+
 header {
-    padding: 10px 10px;
-    margin: 10px 10px;
-    text-align: center;
 }
 
-.TOC {
+header h1,
+nav {
+    /*border-inline-start: 1px solid grey;*/
+    padding-inline-end: 1vw;
 }
 
+header img,
+video {
+    inline-size: 50vw;
+    min-inline-size: 18rem;
+
+    /*border: 1px solid grey;*/
+}
+
+header h1 {
+    font-size: calc(8vw + 1em);
+    font-style: italic;
+}
+
+header nav {
+    & ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    & li {
+        padding: 0 1em 0 0;
+        display: inline;
+
+        & a {
+            text-decoration: none;
+            color: purple;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    background: purple;
+    font-size: 0.6rem;
+    font-style: italic;
+    padding-inline-start: 0.5rem;
+    padding-block: 1rem;
+    padding-block-end: 3rem;
+    margin-block-start: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    & ul,
+    ol {
+        padding: unset;
+        display: inline-block;
+        color: rgba(255, 255, 255, 60%);
+        list-style: none;
+        padding-inline-end: 3em;
+        margin-block-end: 2em;
+
+        & li {
+        }
+
+        & a {
+            color: white;
+            text-decoration: none;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+main article ul,
+main article li,
+main article ol {
+    /*background-color: rgb(255, 255, 255, 0.3);*/
+}
+
+main {
+    article {
+        padding-inline-start: 1em;
+        padding-block: 1em;
+        background-color: rgba(70, 25, 70, 0.2);
+
+        & h2 {
+            font-style: italic;
+        }
+
+        img {
+            max-inline-size: 5em;
+            display: block;
+        }
+
+        & ul,
+        ol {
+            margin-block: 1em;
+        }
+
+        & li {
+            display: block;
+            list-style: none;
+        }
+
+        ol > li::before {
+            content: "⭐️ ";
+        }
+
+        a {
+            padding-block-end: 1vw;
+            text-decoration: none;
+            color: purple;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
 .showcase {
     background-color: rgba(70, 25, 70, 0.2);
-    padding: 10px 20px;
-    margin: 2% 2%;
+    padding: 1em 1em;
+    margin: 10px 10px;
     border: solid gray;
 }
 
@@ -37,59 +169,14 @@ header {
     }
 }
 
-body {
-    margin: 0 auto;
-}
 
-footer {
-    background-color: purple;
-    text-align: right;
-    padding: 10px;
-    color: white;
-    font-style: italic;
-    font-size: 10px;
-    line-height: 5px;
-}
-
-h1 {
-    font-size: 80px;
-    font-style: italic;
-}
 h2 {
     font-size: 40px;
     text-align: center;
 }
 
-h3 {
-}
-
-li {
-}
-ol {
-    list-style-position: inside;
-}
-ul {
-    list-style-position: inside;
-}
-table {
-}
-th,
-td {
-}
-
-tr :hover {
-}
-
-.siteimg {
-    max-width: 600px;
-    min-width: 100px;
-    background-color: white;
-    border-style: solid;
-    border-radius: 30px;
-}
 div.headerpic {
     display: flex;
-    overflow: hidden;
     height: 350px;
 }
 
@@ -165,98 +252,4 @@ iframe {
     display: flex;
 }
 
-.sarabun-thin {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.sarabun-extralight {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-}
-
-.sarabun-light {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.sarabun-regular {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.sarabun-medium {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.sarabun-semibold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.sarabun-bold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.sarabun-extrabold {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-}
-
-.sarabun-thin-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.sarabun-extralight-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-}
-
-.sarabun-light-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.sarabun-regular-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.sarabun-medium-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-
-.sarabun-semibold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-}
-
-.sarabun-bold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.sarabun-extrabold-italic {
-    font-family: "Sarabun", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-}
+*/
