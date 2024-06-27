@@ -6,6 +6,8 @@ For Div
 .container header
 .container footer
 .container article img
+.media
+.panel
 */
 
 /* General Styles */
@@ -26,7 +28,12 @@ body {
 img,
 picture,
 video {
-    max-width: 100%;
+    max-inline-size: 100%;
+}
+
+iframe {
+    max-inline-size: 100%;
+    border: 0;
 }
 
 h1,
@@ -100,13 +107,38 @@ a:active {
     background: rgb(120, 200, 120, 0.8);
 }
 
-/* container for Responsive Design */
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* container/div for Responsive Design */
 
 .container {
 }
 
 .container div {
     flex: 1 auto;
+}
+
+.media {
+    margin-block: 1rem;
+}
+
+.media ~ h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .media {
+        margin: 0;
+        padding: 0;
+    }
+
+    .panel {
+        min-block-size: 500px;
+    }
 }
 
 /* Styles Specific to Header */
@@ -116,28 +148,37 @@ a:active {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    block-size: 100vh;
+    block-size: 92vh;
     padding-inline: 5vw;
+}
 
-    div {
-        padding-inline: 1vw;
-        text-align: center;
-    }
+.container header div {
+    text-align: center;
+    flex: 1 auto;
 }
 
 .container header div:first-child {
-    flex: 2 35vh;
+    flex: 2 30vh;
+}
+
+.container header div:last-child {
+    margin-inline-start: 2rem;
 }
 
 @media screen and (max-width: 600px) {
     .container header {
         display: block;
+        block-size: 70vh;
         padding: 0;
     }
 
     .container header div {
+        margin-block: 2rem;
         padding: 0;
-        padding-block: 2rem;
+    }
+
+    .container header div:last-child {
+        margin: 0;
     }
 }
 
@@ -150,7 +191,7 @@ a:active {
     background: rgba(170, 120, 250, 1);
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
+    align-items: start;
     justify-content: space-around;
     color: white;
 }
@@ -161,12 +202,15 @@ a:active {
     flex: 1 auto;
 }
 
-.container footer section:nth-child(2) {
-    flex: 2;
+.container footer section:nth-child(2),
+section:nth-child(3) {
 }
 
 .container footer section:last-child {
-    text-align: right;
+}
+
+.container footer section h4 {
+    margin-block-end: 1rem;
 }
 
 .container footer section p {
@@ -185,11 +229,27 @@ a:active {
     font-weight: bold;
 }
 
+.container footer section a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
     .container footer {
         display: block;
-        text-align: right;
+        text-align: center;
     }
+
+    .container footer section {
+        margin-block: 2rem;
+    }
+
+    .container footer section a {
+        line-height: 2rem;
+    }
+
+    /* .container footer section::before {
+        content: "🐲";
+    } */
 }
 
 /* Styles Specific to Main content */
@@ -197,14 +257,70 @@ a:active {
 .container article {
     display: flex;
     flex-flow: row wrap;
+    padding-inline: 5vw;
+    margin-block: 2rem;
 }
 
-.container article div {
-    flex: 1 200px;
-    padding-inline: 2rem;
+.container article > div {
+    flex: 1 300px;
+    margin: 0.5rem;
+    padding: 2rem;
+    background-color: rgba(150, 120, 190, 0.2);
+
+    ~ h2,
+    h3,
+    h4,
+    p {
+        margin-block-end: 1rem;
+        line-height: 1.4;
+    }
 }
 
-.container article div:first-child {
+.container article div > div {
+    padding: 0;
+    margin-block-start: 1rem;
+}
+
+.container article > div:first-child {
     flex: 100%;
+    padding: 0;
     margin-block-end: 2rem;
+    background-color: unset;
+}
+
+.container article div:first-child + div {
+    flex: 2 500px;
+}
+
+/* Responsive Main content */
+
+@media screen and (max-width: 600px) {
+    .container article {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-block: 2rem;
+        text-align: center;
+    }
+
+    .container article div {
+        padding: 0;
+        margin: 0;
+        margin-block-end: 1rem;
+        padding-block: 20%;
+        padding-inline: 0.5rem;
+    }
+
+    .container article div:first-child {
+        text-align: center;
+        padding-block: 2rem;
+    }
+
+    .container article div li {
+        text-indent: 0;
+    }
+
+    .container article div a {
+        line-height: 2rem;
+    }
 }
