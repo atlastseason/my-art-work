@@ -1,0 +1,29 @@
+/* Styles Specific to Each Panel for display article */
+
+.container article {
+}
+
+.panel {
+    display: grid;
+    grid-template:
+        "a a a" auto
+        "b b b" 260px
+        "c c c" auto
+        ". . n" auto;
+}
+
+.panel div:first-child {
+    grid-area: a;
+}
+
+.panel div:nth-child(2) {
+    grid-area: b;
+}
+
+.panel div:nth-child(3) {
+    grid-area: c;
+}
+
+.panel div:last-child {
+    grid-area: n;
+}

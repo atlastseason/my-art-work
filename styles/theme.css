@@ -2,7 +2,7 @@
 
 For Div
 .container
-.container section
+.container div
 .container header
 .container footer
 .container article img
@@ -82,25 +82,30 @@ li {
 
 a {
     outline-color: transparent;
+    text-decoration: none;
 }
 
 a:link {
     color: purple;
 }
 
-a:visited {
+/* a:visited {
     color: rgba(90, 150, 90, 1);
-}
+} */
 
 a:focus {
-    text-decoration: none;
     background: rgba(100, 100, 200, 0.1);
 }
 
 a:hover {
     text-decoration: none;
-    background: rgba(120, 120, 220, 0.2);
+    /* background: rgba(120, 120, 220, 0.2); */
 }
+
+/* a:hover::before {
+    content: "☞ ";
+    margin-inline-start: -1rem;
+} */
 
 a:active {
     color: rgba(170, 120, 250, 1);
@@ -124,20 +129,21 @@ a:active {
 
 .media {
     margin-block: 1rem;
+    overflow: hidden;
 }
 
 .media ~ h3 {
     text-align: center;
 }
 
+.panel {
+    min-block-size: 300px;
+}
+
 @media screen and (max-width: 600px) {
     .media {
         margin: 0;
         padding: 0;
-    }
-
-    .panel {
-        min-block-size: 500px;
     }
 }
 
@@ -185,52 +191,54 @@ a:active {
 /* Styles Specific to Footer */
 
 .container footer {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "a b c"
+        "d . .";
     font-family: sans-serif;
     font-weight: lighter;
-    padding-block: 5vh;
-    background: rgba(170, 120, 250, 1);
-    display: flex;
-    flex-flow: row wrap;
-    align-items: start;
-    justify-content: space-around;
     color: white;
+    background: rgba(170, 120, 250, 1);
+    padding-block: 5vh;
+    line-height: 2rem;
 }
 
-.container footer section {
+.container footer > div {
     padding-inline: 2vw;
     padding-block-end: 2vh;
     flex: 1 auto;
 }
 
-.container footer section:nth-child(2),
-section:nth-child(3) {
+.container footer div:nth-child(2),
+div:nth-child(3) {
 }
 
-.container footer section:last-child {
+.container footer div:last-child {
+    p {
+        font-size: 0.8rem;
+    }
 }
 
-.container footer section h4 {
-    margin-block-end: 1rem;
+.container footer div h4 {
+    font-weight: bold;
 }
 
-.container footer section p {
+.container footer div p {
     font-style: italic;
     text-indent: 0;
 }
 
-.container footer section li {
+.container footer div li {
     list-style: none;
     text-indent: 0;
 }
 
-.container footer section a {
+.container footer div a {
     color: white;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-.container footer section a:hover {
-    text-decoration: underline;
+.container footer div a:hover {
 }
 
 @media screen and (max-width: 600px) {
@@ -239,17 +247,13 @@ section:nth-child(3) {
         text-align: center;
     }
 
-    .container footer section {
+    .container footer div {
         margin-block: 2rem;
     }
 
-    .container footer section a {
+    .container footer div a {
         line-height: 2rem;
     }
-
-    /* .container footer section::before {
-        content: "🐲";
-    } */
 }
 
 /* Styles Specific to Main content */
@@ -262,7 +266,7 @@ section:nth-child(3) {
 }
 
 .container article > div {
-    flex: 1 300px;
+    flex: 1 250px;
     margin: 0.5rem;
     padding: 2rem;
     background-color: rgba(150, 120, 190, 0.2);
@@ -289,7 +293,7 @@ section:nth-child(3) {
 }
 
 .container article div:first-child + div {
-    flex: 2 500px;
+    flex: 2 450px;
 }
 
 /* Responsive Main content */
@@ -303,17 +307,15 @@ section:nth-child(3) {
         text-align: center;
     }
 
-    .container article div {
+    .container article > div {
         padding: 0;
         margin: 0;
         margin-block-end: 1rem;
-        padding-block: 20%;
-        padding-inline: 0.5rem;
+        padding-block: 3rem;
     }
 
     .container article div:first-child {
         text-align: center;
-        padding-block: 2rem;
     }
 
     .container article div li {
@@ -322,5 +324,15 @@ section:nth-child(3) {
 
     .container article div a {
         line-height: 2rem;
+        padding-inline-end: 1rem;
+    }
+
+    .container article div {
+        ~ h2,
+        h3,
+        h4,
+        p {
+            padding-inline: 1rem;
+        }
     }
 }
