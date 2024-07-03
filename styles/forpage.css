@@ -1,0 +1,113 @@
+/* Styles for navigation bar in each page */
+
+header.forpage {
+    justify-content: start;
+    margin: 0;
+    padding-inline: 5vw;
+}
+
+.forpage nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.forpage ul {
+    margin: 0;
+    padding: 0;
+    display: inherit;
+    align-items: baseline;
+}
+
+.forpage li {
+}
+
+.forpage h2,
+h3,
+h4,
+a {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+
+/* Styles Specific to Main content */
+
+.container article {
+    display: flex;
+    flex-flow: row wrap;
+    padding-inline: 5vw;
+    margin-block: 2rem;
+}
+
+.container article > div {
+    flex: 1 300px;
+    margin: 0.5rem;
+    padding: 2rem;
+    background-color: rgba(150, 120, 190, 0.2);
+
+    ~ h2,
+    h3,
+    h4,
+    p {
+        margin-block-end: 1rem;
+        line-height: 1.4;
+    }
+}
+
+.container article div > div {
+    padding: 0;
+    margin-block-start: 1rem;
+}
+
+.container article > div:first-child {
+    flex: 100%;
+    padding: 0;
+    margin-block-end: 2rem;
+    background-color: unset;
+}
+
+.container article div:first-child + div {
+    flex: 1;
+}
+
+/* Responsive Main content */
+
+@media screen and (max-width: 600px) {
+    .container article {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-block: 2rem;
+        text-align: center;
+    }
+
+    .container article > div {
+        padding: 0;
+        margin: 0;
+        margin-block-end: 1rem;
+        padding-block: 3rem;
+    }
+
+    .container article div:first-child {
+        text-align: center;
+    }
+
+    .container article div li {
+        text-indent: 0;
+    }
+
+    .container article div a {
+        line-height: 2rem;
+        padding-inline-end: 1rem;
+    }
+
+    .container article div {
+        ~ h2,
+        h3,
+        h4,
+        p {
+            padding-inline: 1rem;
+        }
+    }
+}

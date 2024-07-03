@@ -8,6 +8,7 @@ For Div
 .container article img
 .media
 .panel
+.forpage
 */
 
 /* General Styles */
@@ -32,7 +33,8 @@ video {
 }
 
 iframe {
-    max-inline-size: 100%;
+    inline-size: 100%;
+    block-size: 30vh;
     border: 0;
 }
 
@@ -154,7 +156,6 @@ a:active {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    block-size: 92vh;
     padding-inline: 5vw;
 }
 
@@ -164,7 +165,7 @@ a:active {
 }
 
 .container header div:first-child {
-    flex: 2 30vh;
+    flex: 2 40vh;
 }
 
 .container header div:last-child {
@@ -174,7 +175,7 @@ a:active {
 @media screen and (max-width: 600px) {
     .container header {
         display: block;
-        block-size: 70vh;
+
         padding: 0;
     }
 
@@ -259,14 +260,11 @@ div:nth-child(3) {
 /* Styles Specific to Main content */
 
 .container article {
-    display: flex;
-    flex-flow: row wrap;
     padding-inline: 5vw;
     margin-block: 2rem;
 }
 
 .container article > div {
-    flex: 1 250px;
     margin: 0.5rem;
     padding: 2rem;
     background-color: rgba(150, 120, 190, 0.2);
@@ -286,21 +284,23 @@ div:nth-child(3) {
 }
 
 .container article > div:first-child {
-    flex: 100%;
     padding: 0;
     margin-block-end: 2rem;
     background-color: unset;
 }
 
+.container article div:first-child ~ div {
+    text-align: center;
+}
+
 .container article div:first-child + div {
-    flex: 2 450px;
+    text-align: left;
 }
 
 /* Responsive Main content */
 
 @media screen and (max-width: 600px) {
     .container article {
-        display: block;
         margin: 0;
         padding: 0;
         margin-block: 2rem;
