@@ -20,6 +20,8 @@ header.forpage {
 }
 
 .forpage li {
+    text-indent: 0;
+    margin-inline-start: 1rem;
 }
 
 .forpage h2,
@@ -28,7 +30,25 @@ h4,
 a {
     margin: 0;
     padding: 0;
-    text-indent: 0;
+}
+
+/* Reponsive Header */
+
+@media screen and (max-width: 600px) {
+    header.forpage {
+        position: fixed;
+        bottom: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        inline-size: 100%;
+        block-size: 5rem;
+    }
+
+    .forpage nav {
+    }
 }
 
 /* Styles Specific to Main content */
@@ -41,7 +61,7 @@ a {
 }
 
 .container article > div {
-    flex: 1 300px;
+    flex: 1 400px;
     margin: 0.5rem;
     padding: 2rem;
     background-color: rgba(150, 120, 190, 0.2);
@@ -68,7 +88,11 @@ a {
 }
 
 .container article div:first-child + div {
-    flex: 1;
+    flex: 1 300px;
+}
+
+.container article div:first-child + div p:first-child {
+    font-weight: bold;
 }
 
 /* Responsive Main content */
