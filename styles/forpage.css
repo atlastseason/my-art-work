@@ -1,9 +1,12 @@
 /* Styles for navigation bar in each page */
 
 header.forpage {
+    position: fixed;
+    top: 0;
     justify-content: start;
     margin: 0;
-    padding-inline: 5vw;
+    inline-size: 100%;
+    background-color: whitesmoke;
 }
 
 .forpage nav {
@@ -30,30 +33,29 @@ h4,
 a {
     margin: 0;
     padding: 0;
+    font-size: 2em;
 }
 
 /* Reponsive Header */
 
 @media screen and (max-width: 600px) {
     header.forpage {
-        position: fixed;
-        bottom: 0;
-        background: white;
-        /* background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 1) 80%,
-            rgba(255, 255, 255, 0) 100%
-        ); */
-        inline-size: 100%;
-        padding-block: 0.2rem;
-        /* block-size: 5rem; */
+        padding-block: 1rem;
     }
 
-    .forpage nav {
+    .forpage h2,
+    h3,
+    h4,
+    a {
+        font-size: 1.5em;
     }
 }
 
 /* Styles Specific to Main content */
+
+.container {
+    margin-block-start: 20vh;
+}
 
 .container article {
     display: flex;
@@ -64,42 +66,19 @@ a {
 
 .container article > div {
     flex: 1 400px;
-    margin: 0.5rem;
-    padding: 2rem;
-    background-color: rgba(150, 120, 190, 0.2);
-
-    ~ h2,
-    h3,
-    h4,
-    p {
-        margin-block-end: 1rem;
-        line-height: 1.4;
-    }
-}
-
-.container article div > div {
-    padding: 0;
-    margin-block-start: 1rem;
 }
 
 .container article > div:first-child {
     flex: 100%;
-    padding: 0;
-    margin-block-end: 2rem;
-    background-color: unset;
 }
 
 .container article div:first-child + div {
     flex: 1 300px;
 }
 
-.container article div:first-child + div p:first-child {
-    font-weight: bold;
-}
-
-.container article div[class="thumbnail"] {
-    block-size: calc(30vw + 150px);
-}
+/* div.panel div[class="thumbnail"] {
+    block-size: 480px;
+} */
 
 /* Responsive Main content */
 
@@ -108,36 +87,5 @@ a {
         display: block;
         margin: 0;
         padding: 0;
-        margin-block: 2rem;
-        text-align: center;
-    }
-
-    .container article > div {
-        padding: 0;
-        margin: 0;
-        margin-block-end: 1rem;
-        padding-block: 3rem;
-    }
-
-    .container article div:first-child {
-        text-align: center;
-    }
-
-    .container article div li {
-        text-indent: 0;
-    }
-
-    .container article div a {
-        line-height: 2rem;
-        padding-inline-end: 1rem;
-    }
-
-    .container article div {
-        ~ h2,
-        h3,
-        h4,
-        p {
-            padding-inline: 1rem;
-        }
     }
 }
