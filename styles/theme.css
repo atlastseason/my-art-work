@@ -1,0 +1,369 @@
+/* Class Selector
+
+For Div
+.container
+.container div
+.container header
+.container footer
+.container article img
+.thumbnail
+.panel
+.forpage
+*/
+
+/* General Styles */
+
+* {
+    margin: 0;
+    paddig: 0;
+}
+
+html {
+    font-family: Sarabun, Helvetica, Verdana, Arial, sans-serif;
+    background-color: whitesmoke;
+    font-size: 18px;
+}
+
+body {
+}
+
+img,
+picture,
+video {
+    max-inline-size: 100%;
+}
+
+iframe {
+    inline-size: 100%;
+    block-size: 100%;
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Helvetica;
+    letter-spacing: 0.1rem;
+}
+
+h1 {
+    /*Using calc to adjust size to screen width*/
+    font-size: calc(2rem + 2vw);
+}
+
+h2 {
+    font-size: calc(1.5rem + 2vw);
+}
+
+h3 {
+    font-size: calc(1.25rem + 1vw);
+    font-weight: lighter;
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: lighter;
+}
+
+p,
+ul,
+ol,
+li,
+dl {
+    font-family: Sarabun;
+    font-size: 1rem;
+    padding: 0;
+}
+
+p,
+li {
+    line-height: 1.6;
+    text-indent: 1rem;
+    list-style: none;
+}
+
+a {
+    outline-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: purple;
+}
+
+/* a:visited {
+    color: rgba(90, 150, 90, 1);
+} */
+
+a:focus {
+    background: rgba(100, 100, 200, 0.1);
+}
+
+a:hover {
+    text-decoration: none;
+    /* background: rgba(120, 120, 220, 0.2); */
+}
+
+/* a:hover::before {
+    content: "☞ ";
+    margin-inline-start: -1rem;
+} */
+
+a:active {
+    color: rgba(170, 120, 250, 1);
+    background: rgb(120, 200, 120, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* container/div for Responsive Design */
+
+.container {
+}
+
+.container div {
+    /* flex: 1 auto; */
+}
+
+.thumbnail {
+}
+
+.panel {
+    min-block-size: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    .thumbnail {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Styles Specific to Header */
+
+.container header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-inline: 5vw;
+    margin-block: 1rem;
+}
+
+.container header div {
+    text-align: left;
+    flex: 1 auto;
+}
+
+.container header div:first-child {
+    flex: 2 40%;
+}
+
+.container header div:last-child {
+    margin: 2rem;
+}
+
+.container header div[class="thumbnail"] ~ h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container header {
+        display: block;
+        padding: 0;
+    }
+
+    .container header div {
+        margin-block: 2rem;
+        padding: 0;
+    }
+
+    .container header div:last-child {
+    }
+}
+
+/* Styles Specific to Footer */
+
+.container footer {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "a b c"
+        "d . .";
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: white;
+    background: rgba(170, 120, 250, 1);
+    padding-block: 5vh;
+    line-height: 2rem;
+}
+
+.container footer > div {
+    padding-inline: 2vw;
+    padding-block-end: 2vh;
+    flex: 1 auto;
+}
+
+.container footer div:nth-child(2),
+div:nth-child(3) {
+}
+
+.container footer div:last-child {
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+.container footer div h4 {
+    font-weight: bold;
+}
+
+.container footer div p {
+    font-style: italic;
+    text-indent: 0;
+}
+
+.container footer div li {
+    list-style: none;
+    text-indent: 0;
+}
+
+.container footer div a {
+    color: white;
+}
+
+.container footer div a:hover {
+}
+
+@media screen and (max-width: 600px) {
+    .container footer {
+        display: block;
+        text-align: center;
+    }
+
+    .container footer div {
+        margin-block: 2rem;
+    }
+
+    .container footer div a {
+        line-height: 2rem;
+    }
+}
+
+/* Styles Specific to Main content */
+
+.container article {
+    padding-inline: calc(35vw - 200px);
+    margin-block: 2rem;
+}
+
+.container article > div {
+    margin: 0.5rem;
+    padding: 2rem;
+    background-color: rgba(150, 120, 190, 0.2);
+
+    ~ h2,
+    h3,
+    h4,
+    p {
+        margin-block-end: 1rem;
+        line-height: 1.4;
+    }
+}
+
+.container article div > div {
+    padding: 0;
+    margin-block-start: 1rem;
+}
+
+.container article > div:first-child {
+    padding: 0;
+    margin-block-end: 2rem;
+    background-color: unset;
+}
+
+.container article div:first-child + div {
+    text-align: left;
+}
+
+.container article div[class="next"] {
+    margin: 0 auto;
+    inline-size: 300px;
+    border-radius: 10px;
+    text-align: center;
+    margin-block: 1rem;
+
+    ~ h4,
+    a {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.container div[class="next"]:hover {
+    filter: hue-rotate(180deg);
+}
+
+/* Responsive Main content */
+
+@media screen and (max-width: 600px) {
+    .container article {
+        margin: 0;
+        padding: 0;
+        margin-block: 2rem;
+        text-align: center;
+    }
+
+    .container article > div {
+        padding: 0;
+        margin: 0;
+        margin-block-end: 1rem;
+        padding-block: 3rem;
+    }
+
+    .container article div:first-child {
+        text-align: center;
+    }
+
+    .container article div li {
+        text-indent: 0;
+    }
+
+    .container article div a {
+        line-height: 2rem;
+        padding-inline-end: 1rem;
+    }
+
+    .container article div {
+        ~ h2,
+        h3,
+        h4,
+        p {
+            padding-inline: 1rem;
+        }
+    }
+
+    .container div[class="next"] {
+        filter: hue-rotate(180deg);
+        border-radius: 50px;
+        padding: 1rem;
+
+        ~ h4,
+        a {
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+/* Fix later */
+
+div.big {
+}

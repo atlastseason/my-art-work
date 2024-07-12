@@ -1,0 +1,7 @@
+@layer theme, panel, forpage;
+
+@import url("theme.css") layer(theme);
+
+@import url("panel.css") layer(panel);
+
+@import url("forpage.css") layer(forpage);

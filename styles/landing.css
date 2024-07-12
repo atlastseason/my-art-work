@@ -1,0 +1,5 @@
+@layer theme, panel;
+
+@import url("theme.css") layer(theme);
+
+@import url("panel.css") layer(panel);

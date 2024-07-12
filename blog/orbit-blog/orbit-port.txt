@@ -1,0 +1,49 @@
+# Orbit Storyboard
+
+https://www.youtube.com/watch?v=ywiym61oycw
+
+While I was working at Igloo Studio, I had the opportunity to help storyboard a music video project for none other than Nadech Kugimiya, the Thai superstar, who, for a special reason, wanted to create a music video using animation as a medium. I am glad that the studio accepted the project.
+
+So we start with the script. It's short and simple. It's a journey of a man in space, trying to find a suitable planet to live on. Did I mention that this project is a love song music video? Yes. He's hiding his intention in plain sight.
+
+Some of the key moments were highlighted and requested early on, so we know what to incorporate into the music video. Additionally, the casting and designs reflect the real ones. Nadech treated them as Easter eggs for fans to discover themselves. We had to include those as well.
+
+Here is all of the storyboard I worked on
+
+orbit_storyboard_v2-7.jpeg
+
+orbit_storyboard_v2-8.jpeg
+
+orbit_storyboard_v2-9.jpeg
+
+orbit_storyboard_v2-10.jpeg
+
+orbit_storyboard_v2-11.jpeg
+
+orbit_storyboard_v2-12.jpeg
+
+orbit_storyboard_v2-13.jpeg
+
+orbit_storyboard_v2-14.jpeg
+
+orbit_storyboard_v2-15.jpeg
+
+The funny story I've heard is that when Nadech saw this first version of the animatic, he was quite shocked. He asked the team if this was the final product. We reassured him that it was not, explaining that it was just the beginning of the process. He seemed quite relieved.
+
+Some of the shots needed extra guidance because the nature of 3D animation workflow, camera work and character positions, is quite different from 2D animation.
+
+When developing complicated shots, we had to use different techniques to capture what the director wanted. Some shots could use only After Effects to get the point across, but others involved more complex camera work and multiple messages that needed to be conveyed.
+
+For example, the camera in this shot needs to capture the ground and then fly up into the sky. Characters are flying in swirly patterns, then stopping at the key pose in the sky. If we were to draw all the angles, it might work, but it would take a long time. So, I used Blender as a tool to bring this idea to life for the next team to follow along with. It is 3D in nature, but I can still work quickly and understand what will be needed in this shot.
+
+https://youtu.be/eq0UhJQzFkc
+
+With that, the end result is quite what I had expected. It is beautiful and effectively conveys all the messages to the viewers.
+
+orbit-by-nadech-kugimiya-.gif
+
+The animation and post-production departments did an amazing job on this project! Huge cheers to everyone involved!
+
+screenshot-2566-08-08-at-18.24.45.png
+
+That's my name!
