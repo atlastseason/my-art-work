@@ -1,67 +1,73 @@
 /* Styles for navigation bar in each page */
 
-header.forpage {
+.forpage header {
     position: fixed;
     top: 0;
     justify-content: start;
     margin: 0;
     inline-size: 100%;
     background-color: whitesmoke;
+    padding-block: 1rem;
 }
 
-.forpage nav {
+.forpage header nav {
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.forpage ul {
+.forpage header ul {
     margin: 0;
     padding: 0;
     display: inherit;
     align-items: baseline;
 }
 
-.forpage li {
+.forpage header li {
     text-indent: 0;
     margin-inline-start: 1rem;
 }
 
-.forpage h2,
-h3,
-h4,
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 2em;
+.forpage header {
+    h2,
+    h3,
+    h4,
+    a {
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+    }
 }
 
 /* Reponsive Header */
 
 @media screen and (max-width: 600px) {
-    header.forpage {
+    .forpage header {
         padding-block: 1rem;
     }
 
-    .forpage h2,
-    h3,
-    h4,
-    a {
-        font-size: 1.5em;
+    .forpage header {
+        h2,
+        h3,
+        h4,
+        a {
+            font-size: 1.5rem;
+        }
     }
 }
 
 /* Styles Specific to Main content */
-
-.container {
-    margin-block-start: 20vh;
-}
 
 .container article {
     display: flex;
     flex-flow: row wrap;
     padding-inline: 5vw;
     margin-block: 2rem;
+    padding-inline: calc(20vw - 250px);
+}
+
+.container article:first-child {
+    margin-block-start: 20vh;
 }
 
 .container article > div {
@@ -73,19 +79,26 @@ a {
 }
 
 .container article div:first-child + div {
-    flex: 1 300px;
+    flex: 1 auto;
+    h3 {
+        font-size: 3rem;
+    }
 }
 
-/* div.panel div[class="thumbnail"] {
-    block-size: 480px;
-} */
+.thumbnail {
+    block-size: calc(30vh);
+}
 
 /* Responsive Main content */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .container article {
         display: block;
         margin: 0;
         padding: 0;
+    }
+
+    .thumbnail {
+        block-size: calc(40vh);
     }
 }
