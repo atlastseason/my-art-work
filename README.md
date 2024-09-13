@@ -1,6 +1,6 @@
 Hi there travelers!
 
-I'm naaiintouch or "atlastseason" if you've been followed my art and animation from tumblr and X.
+I'm atlastseason.
 
 I'm working on my own website to help organize my messy art life and put more content out in a centralize manner.
 
