@@ -1,14 +1,26 @@
-<!-- For bsky feed embed -->
-<script
-    src="https://cdn.jsdelivr.net/npm/bsky-embed@0.1.5/dist/bsky-embed.es.js"
-    async
-></script>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>atlastseason.art site v3</title>
 
-<div class="blueskyfeed">
-    <bsky-embed
-        feed="at://did:plc:kdkckpsbkivd6ybcfctvzfuv/app.bsky.feed.generator/aaanvc3irdrag"
-        limit="5"
-        load-more="true"
-    >
-    </bsky-embed>
-</div>
+        <link rel="stylesheet" href="styles/landing.css" />
+
+        <!-- For bsky feed embed -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bsky-embed@0.1.5/dist/bsky-embed.es.js"
+            async
+        ></script>
+    </head>
+
+    <body>
+        <div class="blueskyfeed">
+            <bsky-embed
+                feed="at://did:plc:kdkckpsbkivd6ybcfctvzfuv/app.bsky.feed.generator/aaanvc3irdrag"
+                limit="5"
+                load-more="true"
+            >
+            </bsky-embed>
+        </div>
+    </body>
+</html>
