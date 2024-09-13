@@ -89,19 +89,19 @@ a {
 }
 
 a:link {
-    color: purple;
+    color:;
 }
 
-/* a:visited {
+a:visited {
     color: rgba(90, 150, 90, 1);
-} */
+}
 
 a:focus {
     background: rgba(100, 100, 200, 0.1);
 }
 
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     /* background: rgba(120, 120, 220, 0.2); */
 }
 
@@ -131,6 +131,7 @@ a:active {
 }
 
 .thumbnail {
+    block-size: calc(30vh);
 }
 
 .panel {
@@ -172,6 +173,22 @@ a:active {
     text-align: center;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    margin: 0;
+    inline-size: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-block: 1rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 @media screen and (max-width: 600px) {
     .container header {
         display: block;
@@ -190,23 +207,20 @@ a:active {
 /* Styles Specific to Footer */
 
 .container footer {
-    display: grid;
-    gap: 1rem;
-    grid-template-areas:
-        "a b c"
-        "d . .";
+    display: flex;
     font-family: sans-serif;
     font-weight: lighter;
     color: white;
     background: rgba(170, 120, 250, 1);
     padding-block: 5vh;
     line-height: 2rem;
+    justify-content: center;
 }
 
 .container footer > div {
     padding-inline: 2vw;
     padding-block-end: 2vh;
-    flex: 1 auto;
+    flex: 1;
 }
 
 .container footer div:nth-child(2),
