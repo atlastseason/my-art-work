@@ -67,7 +67,9 @@
 
     <header>
             <div >
-        <img src="images/header.jpg">
+        <img src="images/header.jpg"
+            title="Green Dragons"
+            alt="Header Picture">
             </div  >
             <div>
                 <h1>atlastseason</h1>
@@ -94,15 +96,22 @@
 
     <section class="container">
 
-
     <article>
-
         <div>
         </div>
 <div>
+        <div>
+            <h3>
+            Where to find me ตามได้ที่
+            </h3>
+        </div>
+        <div>
+        <div>
     <ul>
         <li>
             <a target="_blank" href="https://www.patreon.com/atlastseason">Patreon</a>
+
+
         </li>
         <li>
             <a target="_blank" href="https://bsky.app/profile/atlastseason.art">Bluesky</a>
@@ -120,11 +129,63 @@
             <a href="mailto:atlastseason@proton.me">Preferred E-mail?</a>
         </li>
     </ul>
+        </div>
 </div>
+</div>
+
 <div>
-    <h3>For sale!</h3>
+<h3>Support me สนับสนุนค่าขนม</h3>
+<p><em>Any amount is appreciated!</em></p>
 <div>
-    <div id='product-component-1731339793088'></div>
+    <div>
+    <script async
+      src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <stripe-buy-button
+      buy-button-id="buy_btn_1QKWeoKuIbJkVK1OLIq91ykh"
+      publishable-key="pk_live_51NdTEkKuIbJkVK1Ojvari2lw6OzOWLbr8VU0y3wIypmyskXkw2gsepGNsDyzqFtQdZvxpX3KSYTRslTlIsZQyQY200YCp7f0Eu"
+    >
+    </stripe-buy-button>
+    </div>
+    <div>
+        <div>
+    <a href="https://www.buymeacoffee.com/atlastseason"><img src="https://img.buymeacoffee.com/button-api/?text=buy me a coffee&emoji=🐲&slug=atlastseason&button_colour=b795ef&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=FFDD00" /></a>
+        </div>
+    </div>
+
+    <div>
+    <div>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="364BJEA3E8NCY" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+        </form>
+    </div>
+    </div>
+
+    <div>
+    <h4>Direct Payment</h4>
+    </div>
+    <p>กสิกรไทย 026-1-62093-6</p>
+    <p>กรุงศรี 100-1-59509-6</p>
+    <p><a href="https://paypal.me/altseason?country.x=TH&locale.x=en_GB">Paypal</a></p>
+    <div>
+    <img src="images/Qr_Green_Dragon_Support_Square.jpg"
+        title="Support the green dragon สนับสนุนมังเขียว"
+        alt="Qr code of มั่งมี ช้อป มังกรเขียว">
+    </div>
+</div>
+
+</div>
+
+<div>
+    <h3>Shop ร้านน้อยๆ</h3>
+<div>
+    <div>
+    <!-- Shopify code -->
+    <div id='product-component-1731424612815'></div>
     <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
@@ -153,22 +214,44 @@
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
             id: '8966814335219',
-            node: document.getElementById('product-component-1731339793088'),
+            node: document.getElementById('product-component-1731424612815'),
             moneyFormat: '%7B%7Bamount%7D%7D%20%E0%B8%BF',
             options: {
       "product": {
         "styles": {
           "product": {
             "@media (min-width: 601px)": {
-              "max-width": "calc(25% - 20px)",
-              "margin-left": "20px",
+              "max-width": "100%",
+              "margin-left": "0",
               "margin-bottom": "50px"
-            }
+            },
+            "text-align": "left"
+          },
+          "title": {
+            "font-size": "26px"
+          },
+          "button": {
+            "border-radius": "10px"
+          },
+          "price": {
+            "font-size": "18px"
+          },
+          "compareAt": {
+            "font-size": "15.299999999999999px"
+          },
+          "unitPrice": {
+            "font-size": "15.299999999999999px"
           }
         },
-        "buttonDestination": "checkout",
+        "layout": "horizontal",
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "description": true
+        },
+        "width": "100%",
         "text": {
-          "button": "Buy now"
+          "button": "Add to cart"
         }
       },
       "productSet": {
@@ -194,6 +277,33 @@
               "margin-left": "0px",
               "margin-bottom": "0px"
             }
+          },
+          "button": {
+            "border-radius": "10px"
+          },
+          "title": {
+            "font-family": "Helvetica Neue, sans-serif",
+            "font-weight": "bold",
+            "font-size": "26px",
+            "color": "#4c4c4c"
+          },
+          "price": {
+            "font-family": "Helvetica Neue, sans-serif",
+            "font-weight": "normal",
+            "font-size": "18px",
+            "color": "#4c4c4c"
+          },
+          "compareAt": {
+            "font-family": "Helvetica Neue, sans-serif",
+            "font-weight": "normal",
+            "font-size": "15.299999999999999px",
+            "color": "#4c4c4c"
+          },
+          "unitPrice": {
+            "font-family": "Helvetica Neue, sans-serif",
+            "font-weight": "normal",
+            "font-size": "15.299999999999999px",
+            "color": "#4c4c4c"
           }
         },
         "text": {
@@ -202,6 +312,11 @@
       },
       "option": {},
       "cart": {
+        "styles": {
+          "button": {
+            "border-radius": "10px"
+          }
+        },
         "text": {
           "total": "Subtotal",
           "button": "Checkout"
@@ -215,72 +330,11 @@
     })();
     /*]]>*/
     </script>
+    </script>
 </div>
 </div>
-<!--
 
-<div>
-    <div>
-        <video
-            autoplay
-            loop
-            muted
-        >
-            <source src="videos/sharkinsea_loop.mp4" type="video/mp4">
-            </source>
-        </video>
-    </div>
-    <div>
-    <div>
-    <h3>Season’s Verse | จักรวาลน้อยๆ</h3>
-    </div>
-    <ul>
-    <li>
-        <a target="_blank" href="https://bsky.app/profile/did:plc:kdkckpsbkivd6ybcfctvzfuv/feed/aaanvc3irdrag">
-    Shark Bros. |
-    พี่น้องสองฉลาม
-    </a>
-    </li>
-    <!-- <li>Wild Blue |
-    ขาสั้นน้ำเงิน</li>
-    <li>
-        <a target="_blank" href="https://bsky.app/profile/did:plc:kdkckpsbkivd6ybcfctvzfuv/feed/aaaolznhtdu5o">
-        Green Dragon |
-    มังกรเขียวเองจ้า
-        </a>
-    </li>
-    <!-- <li>Two-legged Society |
-    สองขาหมาเห่า</li>
-    <li>Unsung Song |
-    แดนไร้เสียง</li>
-    <li>Diary Me |
-    บทบันทึกความทรงจำ</li>
-    </ul> -->
-
-    <!--
-    <div>
-    <ul>
-    <li>Sketches |
-    มาแค่กายหยาบ</li>
-    <li>Comic |
-    มาเป็นตอนๆ</li>
-    <li>Fanarts |
-    แฟนอาทอวยคนอื่นบ้าง</li>
-    <li>Memes |
-    มีมีส์</li>
-    </ul>
-    </div>
-    </div>
--->
-</div >
-<!--
-    <div class="next">
-        <div>
-            <h4><a href="html/2dwork.html">All the Animated stuffs</a></p>
-            </h4>
-        </div>
-    </div> -->
-
+</div>
 
     <div>
         <div>
@@ -300,102 +354,6 @@
 
 
 </article>
-
-<!--
-<article>
-<div>
-</div>
-
-<div>
-    <div class="big">
-    <img src="videos/untitled-video-made-with-clipchamp-1.gif">
-    </div>
-    <div>
-    <div>
-        <h3>
-            Job’s done | งานที่เป็นงาน
-        </h3>
-    </div>
-
-    <ul>
-    <li>Kindergarten the Musical |
-    อนุบาลเดอะมิวสิคัล</li>
-    <li><a target="_blank" href="blog/anna-blog/anna.html">
-        My Daemon |
-    เดมอนของผม
-    </a>
-    </li>
-    <li>Mindful Living |
-    ใช้ชีวิตอย่างมีสติ</li>
-    <li>
-        <a target="_blank" href="blog/orbit-blog/orbit.html">
-            Orbit: Music Video
-        </a>
-    </li>
-    <li>ตึกยาว Old Suan</li>
-    <li>โตไปไม่โกง</li>
-    <li>Contest |
-    ประกวด</li>
-    </ul>
-    <div>
-
-    <h3>Before atlast | งานก่อนกาล</h3>
-
-    <ul>
-    <li>University |
-    งานมหาลัย</li>
-    <li>High School or earlier |
-    งานสมัยยังเยาว์วัย</li>
-    </ul>
-    </div>
-    </div>
-</div>
-<div class="next">
-
-    <div>
-        <h4><a href="html/storyboardwork.html">Visualize all the way back</a>
-        </h4>
-    </div>
-</div>
-
-</article>
-
-<article>
-<Div>
-</Div>
-<div>
-
-    <h3>Lessons (องค์ความรู้)</h3>
-
-    <ul>
-    <li>Storyboard</li>
-    <li>Animation</li>
-    <li>Web Dev</li>
-    </ul>
-</div>
-</article>
-<article>
-
-<div>
-</div>
-
-    <div>
-        <div>
-    <h3>By Years (ตามปีตามเกิด)</h3>
-        </div>
-            <div>
-            <ul>
-            <li>2021-2025</li>
-            <li>2016-2020</li>
-            <li>2010-2015</li>
-            <li>2007-2009</li>
-            </ul>
-            </div>
-    </div>
-
-    </div>
-</article> -->
-
 
 <section class="container">
 <article>
